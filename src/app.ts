@@ -1,13 +1,16 @@
 // import {  } from './one/file.ts';
+const button: HTMLButtonElement = document.querySelector("button");
+const inputBox: HTMLInputElement = document.querySelector("input");
+const div = document.getElementById("test");
+button.addEventListener("click", function () {
+    test(inputBox.value);
+});
+console.log('Всё сработало');
 
-const firstName: string = "Max";
-const text1: string = `Hello ${firstName}. How are you?`;
-document.getElementById("test").innerHTML = text1;
-
-enum Color {
-    Red = "red",
-    Green = "greeen",
-    Blue = "blueew"
+function test(src: string) {
+    div.innerHTML = src;
 }
-
-console.log(typeof(Color));
+// const firstName: string = "Max";
+// const text1: string = `Hello ${firstName}. How are you?`;
+// document.querySelector("button").value;
+// document.getElementById("test").innerHTML = text1;
